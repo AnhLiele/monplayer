@@ -135,7 +135,7 @@ app.get('/channel-detail', async (req, res) => {
 app.get('/load-more', (req, res) => res.json({ channels: [] }));
 app.get('/search', (req, res) => res.json({ items: [] }));
 
-app.listen(port, () => {
-  console.log(`Source running at http://localhost:${port}`);
-  console.log(`Test detail: http://localhost:${port}/channel-detail?uid=ma-phap-su-hac-am-tro-ve-de-nhap-ngu-13899`);
-});
+// Thay cho: app.listen(port, () => { ... })
+const handler = app;
+
+module.exports = handler;
